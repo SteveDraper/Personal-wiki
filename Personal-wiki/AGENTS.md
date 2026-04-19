@@ -162,6 +162,8 @@ The **`## Summary`** section must read as **finished vault text**, not a backlog
 
 When a directory contains many exports (e.g. hundreds of `.mediawiki` files), you may use `**_export_manifest.json`** next to those files (if present) as an **inventory** (titles, page ids, file paths). It is optional but helps batch planning and coverage checks.
 
+**Flarum JSON:API exports** from this repo’s exporter live under **`raw/`** paths such as **`raw/planets.flarum/`** (and optionally other **`raw/<label>.flarum/`** roots using the same script). Layout: tag **bucket** / one folder per **discussion** / **`discussion.meta.yaml`** + ordered **`posts/post-*.md`**. Interpretation and citation habits: **`wiki/meta/corpus-layout-flarum-jsonapi-export.md`**. Other **`raw/`** corpora (wikitext, clippings, etc.) use **different** shapes—do not assume this tree unless the path matches that layout.
+
 ### Synthesis strategy: **entity-centric**
 
 When ingesting a large corpus (especially an exported wiki), **prefer synthesized pages keyed to real-world or domain “things”**—factions, mechanics, ships, places, products, organizations—using `**type: entity`** (or `**concept**` for themes/rules) with `**related**` links between them. **Do not** default to one vault `wiki/` page per source file unless the user asks for that shape. Merge overlapping wikitext about the same subject onto **one entity (or concept) page**, with multiple `raw/` paths listed under `**sources`** / `**## Sources**`.

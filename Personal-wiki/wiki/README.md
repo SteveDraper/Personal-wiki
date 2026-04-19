@@ -8,7 +8,7 @@
 |------|------|
 | **`index.md`** | Master catalog of wiki pages. **Exempt** from full article frontmatter (see `AGENTS.md`). |
 | **`log.md`** | Append-only activity log. **Exempt** from full article frontmatter. |
-| **`meta/`** | Registries: **`concept-aliases.md`** (aliases), **`domain-registry.md`** (domains / slugs / hubs—see **`AGENTS.md`**). |
+| **`meta/`** | Registries: **`concept-aliases.md`** (aliases), **`domain-registry.md`** (domains / slugs / hubs), **`corpus-layout-flarum-jsonapi-export.md`** (Flarum exporter output under **`raw/*.flarum/`**—see **`AGENTS.md`**). |
 | **`concepts/`** | Domain-scoped notes under **`concepts/<slug>/`**, cross-domain hubs under **`concepts/_shared/`** (see **`AGENTS.md`** → Domains). |
 | **`projects/`** | **`type: project`** pages. |
 | **`people/`** | **`type: person`** dossiers. |

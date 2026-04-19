@@ -1,16 +1,17 @@
 [project]
 name = "mediawiki-raw-import"
 version = "0.1.0"
-description = "Export MediaWiki wikitext into a vault raw subfolder"
+description = "Export MediaWiki wikitext and Flarum discussions into vault raw subfolders"
 requires-python = ">=3.11"
 dependencies = []
 
 [project.scripts]
 wiki-dump-raw = "wiki_dump:main"
+flarum-export-discussions = "flarum_discussions_export:main"
 
 [build-system]
 requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-py-modules = ["wiki_dump"]
+py-modules = ["wiki_dump", "flarum_discussions_export"]

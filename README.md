@@ -1,6 +1,6 @@
 # Personal-wiki
 
-This workspace holds an **Obsidian vault** used as a personal knowledge base (LLM Wiki pattern).
+This workspace holds an **Obsidian vault** used as a personal knowledge base (LLM Wiki pattern). Inspiration: [Andrej Karpathy — *LLM Wiki* gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
 
 - **Vault (notes, raw sources, wiki):** [`Personal-wiki/`](Personal-wiki/README.md) — start there; each folder has a `README.md` aligned with the same rules.
 - **Authoritative policy:** [`Personal-wiki/AGENTS.md`](Personal-wiki/AGENTS.md) — layers, **YAML frontmatter** on wiki articles, **`## Sources`**, style (claims, contradictions), ingest / query / lint, and **`index.md` / `log.md` exceptions**.

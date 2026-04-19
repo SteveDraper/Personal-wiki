@@ -42,3 +42,7 @@ Personal-wiki/wiki/people/*
 
 Personal-wiki/wiki/projects/*
 !Personal-wiki/wiki/projects/README.md
+
+# --- Nested git repo: versions wiki knowledge under Personal-wiki/wiki/ (local-only) ---
+Personal-wiki/wiki/.git/
+Personal-wiki/wiki/.gitignore
