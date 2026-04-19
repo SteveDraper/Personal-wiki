@@ -1,0 +1,22 @@
+---
+description: When answering without explicit context, search and read the Obsidian wiki under Personal-wiki/ before relying on general knowledge alone.
+alwaysApply: true
+---
+
+# Vault-first answers (no explicit context)
+
+When the user asks a **factual or domain question** and **has not** already given everything needed in the message (no full specification, no primary sources pasted, no “answer from this file only” instruction tied to the question):
+
+1. **Treat the vault as the first stop.** The compounding knowledge layer is **`Personal-wiki/wiki/`** (nested under `Personal-wiki/`). **`Personal-wiki/AGENTS.md`** is the full policy; this rule only sets **query priority**.
+
+2. **Orient quickly**, then drill down:
+   - Skim **`Personal-wiki/wiki/index.md`** for topics and hubs.
+   - For names, stems, and cross-domain disambiguation, check **`Personal-wiki/wiki/meta/concept-aliases.md`** and **`Personal-wiki/wiki/meta/domain-registry.md`** as needed.
+
+3. **Search the wiki** for the subject (grep paths under `Personal-wiki/wiki/`, or semantic search). Prefer **existing concept pages**, **domain hubs**, and **related** links over guessing.
+
+4. **Use `raw/` when the wiki points there** or when substantiation is required: read cited paths from article frontmatter / `## Sources`. Do **not** edit `Personal-wiki/raw/` unless the user explicitly asks.
+
+5. **If the vault has nothing relevant**, say that plainly, then answer from general knowledge **only as fallback**, and avoid presenting guesses as if they were vault-grounded.
+
+6. **Skip vault-first** when the user clearly restricts the task (e.g. only edit this file, only explain pasted code, only follow attached PDF) — honor that scope.

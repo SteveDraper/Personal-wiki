@@ -1,0 +1,30 @@
+---
+description: How to build and maintain the Obsidian LLM wiki vault; read AGENTS.md for full rules.
+alwaysApply: true
+---
+
+# Personal wiki (LLM Wiki pattern)
+
+This repo’s Obsidian vault lives under **`Personal-wiki/`** (nested folder). **Authoritative instructions for assistants:** read and follow **`Personal-wiki/AGENTS.md`** each session.
+
+## Non-negotiables
+
+- **`Personal-wiki/raw/`** — User’s sources. **Do not edit, move, or delete** unless the user explicitly instructs you to. **Read** for ingest; cite paths in wiki output.
+- **`Personal-wiki/wiki/`** — You **create and maintain** knowledge Markdown under `concepts/<slug>/`, `concepts/_shared/`, `projects/`, `people/`, etc., plus **`index.md`** and **`log.md`**. Registries: **`wiki/meta/concept-aliases.md`** (aliases; optional per-domain rows) and **`wiki/meta/domain-registry.md`** (domains / slugs / hubs—vault-canonical per **`AGENTS.md`**).
+- **Articles:** Wiki **knowledge pages** use YAML frontmatter (`title`, `type`, `domain` for scoped concepts under `concepts/<slug>/`, `sources`, `related`, `created`, `last-updated`) and a **`## Sources`** body section—**keep `sources` and `## Sources` in sync**. Omit **`domain:`** on **`concepts/_shared/`** pages. Optional **`### Provenance and resolution`** *under* **`## Sources`** for conflict audit trail; **`## Summary`** states corrected facts cleanly. Use wikilinks, atomic scope where practical, consistent `##`/`###` headings. Prefer **dense `[[wikilinks]]`** for references to other vault topics; **do not** use bold only as a substitute for links (see **`AGENTS.md` → Dense wikilinking**, **Lint**). **`index.md`** / **`log.md`** are exempt from the full frontmatter set.
+- **Types:** `concept` \| `entity` \| `source-summary` \| `comparison` \| `project` \| `person` (see `AGENTS.md` for when to use each).
+- **Style:** Concise prose; bullets where helpful; **attribute** factual claims; **state contradictions** between sources explicitly—do not silently resolve conflicts. **Do not** “fix” inaccurate exports in place; **resolve in `wiki/`** and cite **`raw/Authoritative/`** when the user has placed vault-adopted rules there—per **`AGENTS.md` → “Source errors vs authoritative vault truth”.**
+- **`## Summary`:** No TODO boilerplate (“expand later…”, “ingest further…”). Synthesize from cited `raw/` paths; see `AGENTS.md` **Summary quality**.
+- **No** artificial one wiki page per raw file; **many sources** may cite one page.
+- **Bulk / wikitext exports:** `raw/` can hold non-Markdown (e.g. `*.mediawiki`); **`wiki/`** is always Markdown per `AGENTS.md`. Prefer **entity-centric** synthesis; **`_export_manifest.json`** is optional inventory. If **main entities** for a domain are unclear, **stop and ask the user**—don’t invent the taxonomy.
+
+## After substantive wiki work
+
+- Update **`Personal-wiki/wiki/index.md`** when pages are added or meaningfully changed.
+- Append a dated entry to **`Personal-wiki/wiki/log.md`** for ingests and significant maintenance (see prefixes in that file).
+
+## Part 2
+
+- **`Personal-wiki/journal/`** and **`Personal-wiki/content/`** — promoted content into `wiki/` must still follow `AGENTS.md` when it becomes knowledge pages.
+
+Read **`Personal-wiki/AGENTS.md`** for layouts, operations (ingest, query, lint), and examples. **Query:** compound answers and **grounded synthesis** into `wiki/` per **AGENTS.md → Operations → Query**; **ask the user** before persisting new synthesis unless they already approved in-thread.

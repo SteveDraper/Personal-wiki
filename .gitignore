@@ -1,0 +1,45 @@
+# --- OS / editor noise ---
+.DS_Store
+**/.DS_Store
+
+# --- Obsidian: workspace is machine-local; other JSON is small vault prefs ---
+Personal-wiki/.obsidian/workspace.json
+
+# --- Import / tooling (nested package also has its own .gitignore) ---
+scripts/python/.venv/
+scripts/python/__pycache__/
+scripts/python/*.egg-info/
+
+# =============================================================================
+# Vault policy: commit scaffolding + docs referenced by AGENTS.md; omit
+# ingested sources and domain-specific wiki articles/registries.
+# =============================================================================
+
+# --- raw/: immutable sources — only each folder’s README (layout contract) ---
+Personal-wiki/raw/**
+!Personal-wiki/raw/**/
+!Personal-wiki/raw/**/README.md
+
+# --- wiki: operational lists (catalog + log are vault-specific) ---
+Personal-wiki/wiki/index.md
+Personal-wiki/wiki/log.md
+
+# --- wiki/meta: explain the meta layer; not the live alias/domain tables ---
+Personal-wiki/wiki/meta/*
+!Personal-wiki/wiki/meta/README.md
+
+# --- wiki/concepts: generic tree docs + _shared README only ---
+Personal-wiki/wiki/concepts/*/
+!Personal-wiki/wiki/concepts/_shared/
+
+Personal-wiki/wiki/concepts/_shared/*
+!Personal-wiki/wiki/concepts/_shared/README.md
+
+# --- wiki/people & wiki/projects: placeholders only ---
+Personal-wiki/wiki/people/*
+!Personal-wiki/wiki/people/README.md
+!Personal-wiki/wiki/people/.gitkeep
+
+Personal-wiki/wiki/projects/*
+!Personal-wiki/wiki/projects/README.md
+!Personal-wiki/wiki/projects/.gitkeep
