@@ -5,10 +5,11 @@
 # --- Obsidian: workspace is machine-local; other JSON is small vault prefs ---
 Personal-wiki/.obsidian/workspace.json
 
-# --- Import / tooling (nested package also has its own .gitignore) ---
+# --- Import / tooling (Python package under scripts/python) ---
 scripts/python/.venv/
 scripts/python/__pycache__/
 scripts/python/*.egg-info/
+scripts/python/**/*.pyc
 
 # =============================================================================
 # Vault policy: commit scaffolding + docs referenced by AGENTS.md; omit
