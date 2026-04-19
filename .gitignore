@@ -39,8 +39,6 @@ Personal-wiki/wiki/concepts/_shared/*
 # --- wiki/people & wiki/projects: placeholders only ---
 Personal-wiki/wiki/people/*
 !Personal-wiki/wiki/people/README.md
-!Personal-wiki/wiki/people/.gitkeep
 
 Personal-wiki/wiki/projects/*
 !Personal-wiki/wiki/projects/README.md
-!Personal-wiki/wiki/projects/.gitkeep
