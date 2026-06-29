@@ -7,15 +7,24 @@ alwaysApply: true
 
 When the user asks a **factual or domain question** and **has not** already given everything needed in the message (no full specification, no primary sources pasted, no “answer from this file only” instruction tied to the question):
 
-1. **Treat the vault as the first stop.** The compounding knowledge layer is **`Personal-wiki/wiki/`** (nested under `Personal-wiki/`). **`Personal-wiki/AGENTS.md`** is the full policy; this rule only sets **query priority**.
+### Vault root (do not guess the folder)
+
+The editable wiki and **`AGENTS.md`** live under a single **vault root**: the directory that contains both **`AGENTS.md`** and a **`wiki/`** subdirectory.
+
+- In **this** git repo, the vault root is **`Personal-wiki/Personal-wiki/`** (the outer **`Personal-wiki/`** folder is only the repo wrapper). Paths like **`Personal-wiki/wiki/`** or **`Personal-wiki/AGENTS.md`** at the top level are **wrong** here.
+- **Before** grepping or semantic-searching “the wiki”, resolve the vault root: find **`AGENTS.md`**, then use its sibling **`wiki/`**. Do not infer from repo name alone.
+
+Use these paths once the vault root is confirmed (for this repo: **`Personal-wiki/Personal-wiki/`**):
+
+1. **Treat the vault as the first stop.** The compounding knowledge layer is **`wiki/`** under vault root. **`AGENTS.md`** at vault root is the full policy; this rule only sets **query priority**.
 
 2. **Orient quickly**, then drill down:
-   - Skim **`Personal-wiki/wiki/index.md`** for topics and hubs.
-   - For names, stems, and cross-domain disambiguation, check **`Personal-wiki/wiki/meta/concept-aliases.md`** and **`Personal-wiki/wiki/meta/domain-registry.md`** as needed.
+   - Skim **`wiki/index.md`** (vault-relative) or **`Personal-wiki/Personal-wiki/wiki/index.md`** from the repo root for topics and hubs.
+   - For names, stems, and cross-domain disambiguation, check **`wiki/meta/concept-aliases.md`** and **`wiki/meta/domain-registry.md`** as needed.
 
-3. **Search the wiki** for the subject (grep paths under `Personal-wiki/wiki/`, or semantic search). Prefer **existing concept pages**, **domain hubs**, and **related** links over guessing.
+3. **Search the wiki** for the subject (grep under **`Personal-wiki/Personal-wiki/wiki/`**, or semantic search scoped there). Prefer **existing concept pages**, **domain hubs**, and **related** links over guessing.
 
-4. **Use `raw/` when the wiki points there** or when substantiation is required: read cited paths from article frontmatter / `## Sources`. Do **not** edit `Personal-wiki/raw/` unless the user explicitly asks.
+4. **Use `raw/` when the wiki points there** or when substantiation is required: read cited paths from article frontmatter / `## Sources`. Paths under `raw/` are relative to **vault root** (here: **`Personal-wiki/Personal-wiki/raw/`**). Do **not** edit `raw/` unless the user explicitly asks.
 
 5. **If the vault has nothing relevant**, say that plainly, then answer from general knowledge **only as fallback**, and avoid presenting guesses as if they were vault-grounded.
 

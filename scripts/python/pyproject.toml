@@ -8,10 +8,17 @@ dependencies = []
 [project.scripts]
 wiki-dump-raw = "wiki_dump:main"
 flarum-export-discussions = "flarum_discussions_export:main"
+static-html-site-export = "static_html_site_export:main"
+donovansvgap-static-export = "donovansvgap_static_export:main"
 
 [build-system]
 requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-py-modules = ["wiki_dump", "flarum_discussions_export"]
+py-modules = [
+    "wiki_dump",
+    "flarum_discussions_export",
+    "static_html_site_export",
+    "donovansvgap_static_export",
+]
